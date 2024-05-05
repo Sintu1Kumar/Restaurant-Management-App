@@ -19,6 +19,7 @@
         v-model="restaurant.contact"
       />
       <button>Add New Restaurant</button>
+      <button>Clear</button>
     </div>
   </form>
 </template>
@@ -52,7 +53,7 @@ export default {
       if (result.status == 201) {
         alert('New Restaurant Added!')
       }
-    }
+    },
   }
 }
 </script>
@@ -62,7 +63,7 @@ h1 {
   text-align: center;
 }
 .add-menu h2 {
-  margin: -5px 0px;
+  margin: -5px 0px 5px 0px;
 }
 .add-menu {
   display: flex;

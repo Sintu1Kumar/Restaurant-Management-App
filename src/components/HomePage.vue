@@ -1,7 +1,7 @@
 <template>
   <HeaderPage />
   <h1>
-    Hello {{ name.charAt(0).toUpperCase() + name.substr(1).toLowerCase() }}, Welcome on Home Page
+    Hello {{ name.toLowerCase().replace(/\b\w/g, (m) => m.toUpperCase()) }}, Welcome on Home Page
   </h1>
   <hr />
   <table>
@@ -18,7 +18,7 @@
       <td>
         <tr>
           <td><RouterLink :to="'/update-res/' + item.id">Update</RouterLink></td>
-          <td><button v-on:click="deleteRestaurant">Delete</button></td>
+          <td><button v-on:click="deleteRestaurant(item.id)">Delete</button></td>
         </tr>
       </td>
     </tr>
@@ -41,13 +41,13 @@ export default {
     HeaderPage
   },
   methods: {
-    
-    async deleteRestaurant(e) {
-      e.preventDefault()
-      let result = await axios.delete('http://localhost:3000/restaurant/' + this.$route.params.id)
-      console.log(result.data)
+    async deleteRestaurant(id) {
+      let result = await axios.delete('http://localhost:3000/restaurant/' + id)
+      // console.log(result.data)
       if (result.status == 200) {
-        console.log(result.data)
+        // console.log(result.data)
+        alert('Data has been deleted successfully')
+        this.loadData()
       }
     },
     async loadData() {
@@ -82,5 +82,19 @@ td {
   font-size: 30px;
   border: 1px solid;
   text-align: center;
+}
+td tr {
+  display: flex;
+  justify-content: space-around;
+}
+td tr td {
+  border: none;
+}
+td tr td button {
+  padding: 7px;
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+  border: none;
 }
 </style>
