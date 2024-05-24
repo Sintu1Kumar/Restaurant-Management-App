@@ -73,7 +73,7 @@ h1 {
   text-align: center;
 }
 .add-menu h2 {
-  margin: -5px 0px;
+  margin: -5px 0px 5px 0px;
 }
 .add-menu {
   display: flex;

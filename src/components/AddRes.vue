@@ -19,7 +19,7 @@
         v-model="restaurant.contact"
       />
       <button>Add New Restaurant</button>
-      <button>Clear</button>
+      <button type="button" v-on:click="clearHundler">Clear</button>
     </div>
   </form>
 </template>
@@ -44,6 +44,7 @@ export default {
   methods: {
     async addRestaurant(e) {
       e.preventDefault()
+      this.name = JSON.parse(localStorage.getItem('user-info')).name
       const result = await axios.post('http://localhost:3000/restaurant', {
         name: this.restaurant.name,
         address: this.restaurant.address,
@@ -54,6 +55,11 @@ export default {
         alert('New Restaurant Added!')
       }
     },
+    clearHundler() {
+      this.restaurant.name = ''
+      this.restaurant.address = ''
+      this.restaurant.contact = ''
+    }
   }
 }
 </script>

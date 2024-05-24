@@ -1,0 +1,72 @@
+{
+  "sign-up": [
+    {
+      "id": "0cc1",
+      "name": "Mohan kumar",
+      "email": "Mohan1234@gmail.com",
+      "password": "678954321"
+    },
+    {
+      "id": "03c1",
+      "name": "Sintu Kumar",
+      "email": "kumar123@gmail.com",
+      "password": "Kumar123"
+    },
+    {
+      "id": "ec6b",
+      "name": "Sohan",
+      "email": "sohan@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "3a72",
+      "name": "rohan",
+      "email": "rohan@text.com",
+      "password": "12345"
+    },
+    {
+      "id": "b5d9",
+      "name": "peter",
+      "email": "piter@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "af42",
+      "name": "Mohan Kumar",
+      "email": "Mohan@text.com",
+      "password": "12345"
+    },
+    {
+      "id": "fd25",
+      "name": "ram kumar",
+      "email": "ram123@gmail.com",
+      "password": "ram@123"
+    },
+    {
+      "id": "8641",
+      "name": "sintu kumar",
+      "email": "sintu123@gmail.com",
+      "password": "sintu@123"
+    }
+  ],
+  "restaurant": [
+    {
+      "name": "Starbugs",
+      "address": "East Delhi",
+      "contact": "0123456789",
+      "id": "0221"
+    },
+    {
+      "name": "Domnos",
+      "address": "Noida",
+      "contact": "0123456789",
+      "id": "f419"
+    },
+    {
+      "id": "63eb",
+      "name": "Domnos",
+      "address": "Noida",
+      "contact": "0123456789"
+    }
+  ]
+}
