@@ -33,11 +33,11 @@ export default {
         `http://localhost:3000/sign-up?email=${this.email}&password=${this.password}`
       )
       if (result.status == 200 && result.data.length > 0) {
-        alert('Login successful')
+        alert('Login Successful')
         localStorage.setItem('user-info', JSON.stringify(result.data[0]))
         this.$router.push({ name: 'HomePage' })
       } else {
-        alert('Login failed')
+        alert('Login Failed')
       }
     }
   },
@@ -85,5 +85,8 @@ export default {
   background-color: rgb(202, 200, 200);
   color: black;
   cursor: pointer;
+}
+#login_1 button :hover {
+  background-color: rgb(43, 226, 104);
 }
 </style>
